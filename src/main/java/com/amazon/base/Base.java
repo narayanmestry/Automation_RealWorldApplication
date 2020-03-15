@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 
-	public WebDriver driver;
+	public static WebDriver driver = null;
 
 	/**
 	 * @throws IOException : used for initiate the browser
@@ -46,10 +46,12 @@ public class Base {
 	
 	/**
 	 * used to close the Browser
+	 * @throws InterruptedException 
 	 */
 //	@AfterMethod
-	public void closeBrowser()
+	public void closeBrowser() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		driver.close();
 	}
 }

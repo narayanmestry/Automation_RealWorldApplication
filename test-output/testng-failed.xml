@@ -6,7 +6,7 @@
       <class name="com.amazon.testcases.TC_HomePage">
         <methods>
           <include name="startBrowser"/>
-          <include name="tc_005_addSameItemMultipleTime"/>
+          <include name="tc_001_SearchProduct"/>
         </methods>
       </class> <!-- com.amazon.testcases.TC_HomePage -->
     </classes>
