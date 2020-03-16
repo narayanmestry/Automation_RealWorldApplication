@@ -37,8 +37,8 @@ public class Base {
 			driver = new ChromeDriver();		
 		}
 		driver.get("https://www.amazon.in/");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage(). timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage(). timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 	}
@@ -51,7 +51,8 @@ public class Base {
 //	@AfterMethod
 	public void closeBrowser() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		driver.close();
+		driver.quit();
 	}
 }

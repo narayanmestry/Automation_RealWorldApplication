@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 15 13:23:11 IST 2020</td>
+<td>Started on:</td><td>Mon Mar 16 15:03:58 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22785 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21915 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.amazon.testcases.TC_HomePage.tc_005_addSameItemMultipleTime()'><b>tc_005_addSameItemMultipleTime</b><br>Test class: com.amazon.testcases.TC_HomePage</td>
-<td><div><pre>java.lang.IllegalMonitorStateException
-	at java.base/java.lang.Object.wait(Native Method)
-	at com.amazon.testcases.TC_HomePage.tc_005_addSameItemMultipleTime(TC_HomePage.java:92)
+<td title='com.amazon.testcases.TC_HomePage.tc_006_addMultipleItemToCart()'><b>tc_006_addMultipleItemToCart</b><br>Test class: com.amazon.testcases.TC_HomePage</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span style=&quot;-webkit-line-clamp: 2; -webkit-box-orient: vertical;&quot; data-click-el=&quot;title&quot; class=&quot;sb_3XafbQtX sb_25yic0YU sb_CyFsQ0hU&quot;&gt;...&lt;/span&gt; is not clickable at point (765, 314). Other element would receive the click: &lt;a aria-hidden=&quot;&quot; href=&quot;https://aax-eu.amazon-adsystem.com/x/c/Qj9PuTOt8iwjRNbYJ5-OHdgAAAFw4rGKMAMAAAH2ASSM7q4/https://www.amazon.in/gp/aw/d/B083PFCFRB?pf_rd_p=81a4aecc-1d58-4ee0-b8ac-4a2a6895deba&amp;amp;aaxitk=sWI62ZL3jNQhxFtEhbeyDg&amp;amp;hsa_cr_id=9770286220002&amp;amp;ref_=sb_s_sparkle&quot; tabindex=&quot;-1&quot; target=&quot;_top&quot; class=&quot;sb_1REHiRA7 sb_Es4IY3ln sb_1DwlnAbi&quot; data-click-type=&quot;desc&quot; data-click-index=&quot;0&quot; data-click-asin=&quot;B083PFCFRB&quot;&gt;&lt;/a&gt;
+  (Session info: chrome=80.0.3987.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;admin1-LIVA-Z2V&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.0.0-38-generic&apos;, java.version: &apos;11.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /tmp/.com.google.Chrome.Jrl19t}, goog:chromeOptions: {debuggerAddress: localhost:38521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d95b8db785a486ff594d4636acb08770
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.amazon.page.HomePage.selectItem1(HomePage.java:164)
+	at com.amazon.testcases.TC_HomePage.tc_006_addMultipleItemToCart(TC_HomePage.java:141)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1924966548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1924966548'><pre>java.lang.IllegalMonitorStateException
-	at java.base/java.lang.Object.wait(Native Method)
-	at com.amazon.testcases.TC_HomePage.tc_005_addSameItemMultipleTime(TC_HomePage.java:92)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace452015229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace452015229'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span style=&quot;-webkit-line-clamp: 2; -webkit-box-orient: vertical;&quot; data-click-el=&quot;title&quot; class=&quot;sb_3XafbQtX sb_25yic0YU sb_CyFsQ0hU&quot;&gt;...&lt;/span&gt; is not clickable at point (765, 314). Other element would receive the click: &lt;a aria-hidden=&quot;&quot; href=&quot;https://aax-eu.amazon-adsystem.com/x/c/Qj9PuTOt8iwjRNbYJ5-OHdgAAAFw4rGKMAMAAAH2ASSM7q4/https://www.amazon.in/gp/aw/d/B083PFCFRB?pf_rd_p=81a4aecc-1d58-4ee0-b8ac-4a2a6895deba&amp;amp;aaxitk=sWI62ZL3jNQhxFtEhbeyDg&amp;amp;hsa_cr_id=9770286220002&amp;amp;ref_=sb_s_sparkle&quot; tabindex=&quot;-1&quot; target=&quot;_top&quot; class=&quot;sb_1REHiRA7 sb_Es4IY3ln sb_1DwlnAbi&quot; data-click-type=&quot;desc&quot; data-click-index=&quot;0&quot; data-click-asin=&quot;B083PFCFRB&quot;&gt;&lt;/a&gt;
+  (Session info: chrome=80.0.3987.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;admin1-LIVA-Z2V&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.0.0-38-generic&apos;, java.version: &apos;11.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /tmp/.com.google.Chrome.Jrl19t}, goog:chromeOptions: {debuggerAddress: localhost:38521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d95b8db785a486ff594d4636acb08770
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.amazon.page.HomePage.selectItem1(HomePage.java:164)
+	at com.amazon.testcases.TC_HomePage.tc_006_addMultipleItemToCart(TC_HomePage.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,8 +153,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>14</td>
-<td>com.amazon.testcases.TC_HomePage@3bd40a57</td></tr>
+<td>11</td>
+<td>com.amazon.testcases.TC_HomePage@3d680b5a</td></tr>
 </table><p>
 </body>
 </html>

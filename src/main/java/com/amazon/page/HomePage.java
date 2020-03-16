@@ -3,17 +3,21 @@ package com.amazon.page;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
 	static WebDriver driver = null;
 
+	
 	@FindBy(id = "twotabsearchtextbox")
 	WebElement textbox;
 
@@ -37,13 +41,19 @@ public class HomePage {
 
 	@FindBy(id = "dropdown1_4")
 	WebElement quntity;
+ 
+	@FindBy(xpath = "//span[contains(text(),'Sports Running & Walking Shoes for Men')]")
+	WebElement item1;
 
-	@FindBy(xpath = "//span[text()='Lenovo K9 (Black, 32 GB) (3 GB RAM)']")
-	WebElement lenevoMobile1;
-
-	@FindBy(xpath = "Lenovo A6 Note (Blue, 32 GB) (3 GB RAM)")
-	WebElement lenevoMobile2;
-
+	@FindBy(xpath = "//span[contains(text(),'Sports Running Shoes for Men')]")
+	WebElement item2;
+	
+	@FindBy(id = "add-to-cart-button")
+	WebElement addtocartButton;
+ 
+	@FindBy(xpath = "//input[@value = 'Delete']")
+	WebElement delete;
+ 
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -71,9 +81,9 @@ public class HomePage {
 
 	/***********************************************************************************
 	 * @param index
-	 * @Description :select the item from Dropdown
+	 * @Description :select the item from Dropdown by index
 	 ************************************************************************************/
-	public void selectDropdown(int index) {
+	public void selectDropdownByIndex(int index) {
 		WebElement list = dropdownlist;
 		Select s = new Select(list);
 		dropdownlist.click();
@@ -81,6 +91,26 @@ public class HomePage {
 		s.selectByIndex(index);
 	}
 
+	
+	/***********************************************************************************
+	 * @param itemName
+	 * @Description :select the item from Dropdown by index
+	 ************************************************************************************/
+	public void selectDropdownByName(String itemName) {
+		WebElement list = dropdownlist;
+		Select s = new Select(list);
+		dropdownlist.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		s.selectByVisibleText(itemName);;
+	}
+
+	
+	
+	
+	
+	
+	
+	
 	/***********************************************************************************
 	 * @Description : Select Image
 	 ************************************************************************************/
@@ -123,19 +153,57 @@ public class HomePage {
 	 * 				  list
 	 ************************************************************************************/
 
-	public void select_Dropdowm_For_IncreaseQuntity(int index) {
+	public void select_Dropdowm_For_IncreaseQuntity() {
 		quntityDropdown.click();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		quntity.click();
 	}
 
-	
-	public void selectItem1() {
-		lenevoMobile1.click();
+	/***********************************************************************************
+	 * @Description : click to item's
+	 ************************************************************************************/
+	public void selectItem1()
+	{
+		item1.click();
+	}
+
+	public void selectItem2()
+	{
+		item2.click();
+	}
+
+
+	/***********************************************************************************
+	 * @Description : Scroll down to add to cart
+	 ************************************************************************************/
+	public void downScroll_2() throws InterruptedException {
+		int x, y;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		x = addtocartButton.getLocation().getX();
+		y = addtocartButton.getLocation().getY();
+		js.executeScript("window.scrollBy(" + x + "," + (y - 100) + ")");
+		Thread.sleep(1000);
 	}
 	
-	public void selectItem2() {
-		lenevoMobile2.click();
+	
+	/***********************************************************************************
+	 * @Description : Select item to cart
+	 ************************************************************************************/
+	public void selectAddToCart2()
+	{
+		addtocartButton.click();
 	}
+	
+	
+	
+	/**
+	 * @Description : Delete item from cart
+	 */
+	public void deleteItem()
+	{
+		delete.click();
+	}
+	
+	
 	
 }

@@ -21,15 +21,6 @@ public class Utility {
 		return property.get(key);
 	}
 
-	/**
-	 * @param key : reffer locator value in property
-	 * @return locator value 
-	 * @throws IOException
-	 */
-	public static String getLocatorValue(String key) throws IOException {
-		file = new FileInputStream("./config/webElement.properties");
-		property.load(file);
-		return property.get(key).toString();
-	}
+	
 
 }

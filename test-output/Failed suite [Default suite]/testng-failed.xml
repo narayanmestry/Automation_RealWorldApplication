@@ -5,8 +5,9 @@
     <classes>
       <class name="com.amazon.testcases.TC_HomePage">
         <methods>
+          <include name="closeBrowser"/>
+          <include name="tc_006_addMultipleItemToCart"/>
           <include name="startBrowser"/>
-          <include name="tc_005_addSameItemMultipleTime"/>
         </methods>
       </class> <!-- com.amazon.testcases.TC_HomePage -->
     </classes>
