@@ -216,7 +216,7 @@ public class TC_HomePage extends Base {
 	
 	/***********************************************************************************
 	 * @throws InterruptedException 
-	 * @Description : Select item to cart
+	 * @Description : Select item to Cart
 	 ************************************************************************************/
 	
 	@Test
